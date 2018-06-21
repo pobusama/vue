@@ -3,5 +3,6 @@
 # Vue Discovery
 
 ## Reference
-
-## Question
+- [code analysis](https://ustbhuangyi.github.io/vue-analysis/data-driven/mounted.html#%E6%80%BB%E7%BB%93)
+- [API doc](https://cn.vuejs.org/v2/api/)
+## Questions
