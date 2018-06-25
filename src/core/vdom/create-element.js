@@ -47,7 +47,11 @@ export function createElement (
 export function _createElement (
   context: Component,
   tag?: string | Class<Component> | Function | Object,
-  data?: VNodeData,
+  /*
+   * VNodeData 在 vue/types/vnode.d.ts 文件下定义和测试，在 vue/flow/vnode.js 下声明，在 .flowconfig 下配置到 flow。
+   * Q: vnode.d.ts 和 vnode.js 声明的 VNodeData 类型有什么区别？
+   */ 
+  data?: VNodeData, 
   children?: any,
   normalizationType?: number
 ): VNode | Array<VNode> {
