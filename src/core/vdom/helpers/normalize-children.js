@@ -51,11 +51,15 @@ function normalizeArrayChildren (children: any, nestedIndex?: string): Array<VNo
     //  nested
     if (Array.isArray(c)) {
       if (c.length > 0) {
+  
+        // 此处 normalizeArrayChildren 后返回数组
         c = normalizeArrayChildren(c, `${nestedIndex || ''}_${i}`)
         // merge adjacent text nodes
         if (isTextNode(c[0]) && isTextNode(last)) {
           res[lastIndex] = createTextVNode(last.text + (c[0]: any).text)
-          c.shift()
+
+          // 合并文本元素后（last 和 c[0]），移除已合并的元素（c[0]）
+          c.shift() 
         }
         res.push.apply(res, c)
       }
