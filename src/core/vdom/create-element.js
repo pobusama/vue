@@ -50,14 +50,15 @@ export function _createElement (
   /*
    * VNodeData 在 vue/types/vnode.d.ts 文件下定义和测试，在 vue/flow/vnode.js 下声明，在 .flowconfig 下配置到 flow。
    * Q: vnode.d.ts 和 vnode.js 声明的 VNodeData 类型有什么区别？
-   */ 
-  data?: VNodeData, 
+   */
+  data?: VNodeData,
   children?: any,
   normalizationType?: number
 ): VNode | Array<VNode> {
   if (isDef(data) && isDef((data: any).__ob__)) {
     process.env.NODE_ENV !== 'production' && warn(
-      `Avoid using observed data object as vnode data: ${JSON.stringify(data)}\n` +
+      'Avoid using observed data object as vnode data:' +
+      JSON.stringify(data) +
       'Always create fresh vnode data objects in each render!',
       context
     )
